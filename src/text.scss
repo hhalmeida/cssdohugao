@@ -1,0 +1,19 @@
+.no-wrap{white-space:nowrap!important;}
+
+.pre{white-space:pre!important;}
+
+.ellipsis{overflow:hidden!important;text-overflow:ellipsis!important;}
+
+.line-height-reset{line-height:normal;}
+.line-height-1{line-height:1!important;}
+
+/*
+* text font size
+*/
+$fs: font-size !default;
+
+@for $i from 8 through 20{
+  .#{$fs}-#{$i}{
+    #{$fs}: 7px + $i !important;
+  }
+}
