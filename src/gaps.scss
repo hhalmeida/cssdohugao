@@ -4,9 +4,9 @@ $horizontal-gaps: 'hgap' !default;
 $vertical-gaps: 'vgap' !default;
 
 @for $i from 5 through 30{
-    .#{$horizontal-gaps}-#{$i}{
-        width: 0px + $i !important;
-    }
+.#{$horizontal-gaps}-#{$i}{
+    width: 0px + $i !important;
+}
 };
 
 @for $i from 5 through 30{

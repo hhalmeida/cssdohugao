@@ -1,13 +1,9 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
-
 var cssnano = require('gulp-cssnano');
 var del = require('del');
 
-gulp.task('start', function() {
-    console.log('Hugo Almeida - CSS Do Hugão');
-});
 
 gulp.task('scss', function(){
     console.log('Building SCSS to CSS');
@@ -18,17 +14,17 @@ gulp.task('scss', function(){
 
 gulp.task('packcss', function () {
     return gulp.src(['dev/**/*.css'])
-        .pipe(concat('cssHugao.css'))
+        .pipe(concat('cssdohugao.css'))
         .pipe(cssnano())
         .pipe(gulp.dest('dist'));
 });
 
-
-
-
-
+gulp.task('start',['scss', 'packcss'], function() {
+    console.log('Hugo Almeida - CSS Do Hugão');
+});
 
 /**APAGAR */
+
 gulp.task('watch', ['scss'], function(){
     gulp.watch('app/scss/**/*.scss', ['scss']); 
     // Other watchers

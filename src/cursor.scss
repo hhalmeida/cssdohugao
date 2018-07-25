@@ -1,0 +1,13 @@
+/*Cursores
+-------------------------------*/
+$cursores: 'pointer', 'move', 'wait', 'no-drop', 'not-allowed';
+$cursor: 'cursor' !default;
+
+@each $i in $cursores{
+  .#{$cursor}-#{$i}{
+      cursor: $i !important;
+  }
+};
+
+
+

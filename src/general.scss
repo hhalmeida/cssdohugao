@@ -1,7 +1,29 @@
 /* General
 ----------------------------------------*/
-.hand-cursor{cursor:pointer}
-
 .no-click{ pointer-events:none;}
-
 .no-click > *{ pointer-events:all;}
+
+$width:  'width' !default;
+$height: 'heigth' !default;
+$margin: 'margin' !default;
+$padding:'padding' !default;
+
+@for $i from 6 through 42{
+  .#{$width}-#{$i}{
+    if($i > 18){
+    width: 0px + $i+2 !important;
+    }else{
+      width: 0px + $i !important;
+    }
+  }
+};
+
+@for $i from 5 through 42{
+  .#{$height}-#{$i}{
+    if($i > 18){
+      height: 0px + $i+2 !important;
+    }else{
+      height: 0px + $i !important;
+    }
+  }
+};
