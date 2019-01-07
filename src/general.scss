@@ -1,29 +1,123 @@
-/* General
+/* Base System Colors
+--------------------------------------*/
+.primary{ color:#488aff}
+.secondary{ color:#32db64}
+.danger{ color:#f53d3d}
+.light{ color:#f4f4f4}
+.dark{ color:#222}
+.yellow{ color:#FFCC29}
+.yellow-light{color:#FFF212}
+.blue{color:#008AC6 }
+.blue-dark{ color:#006893}
+.green{ color:#A8CF45}
+.green-dark{ color:#00A859}
+.red{color:#Ed3237}
+.red-dark{color:#Ad3335}
+
+/* Background Colors
+--------------------------------------*/
+.bg-primary{ background:#488aff}
+.bg-secondary{ background:#32db64}
+.bg-danger{ background:#f53d3d}
+.bg-light{ background:#f4f4f4}
+.bg-dark{ background:#222}
+.bg-yellow{ background:#FFCC29}
+.bg-yellow-light{background:#FFF212}
+.bg-blue{background:#008AC6 }
+.bg-blue-dark{ background:#006893}
+.bg-green{ background:#A8CF45}
+.bg-green-dark{ background:#00A859}
+.bg-red{background:#Ed3237}
+.bg-red-dark{background:#Ad3335}
+.bg-mint { background: #00b894; }
+.bg-electro { background: #0984e3; }
+.bg-exodus { background: #6c5ce7; }
+.bg-breeze { background: #b2bec3; }
+.bg-city { background: #dfe6e9; }
+.bg-shy { background: #a29bfe; }
+.bg-yarrow { background: #fdcb6e; }
+.bg-orangeville { background: #e17055; }
+.bg-chicong { background: #e55039; }
+.bg-pink { background: #fd79a8; }
+.bg-prunus { background: #e84393; }
+.bg-american { background: #636e72; }
+.bg-dracula { background: #2d3436; }
+
+/* text color
+----------------------------------------*/
+.txt-primary{ color:#488aff}
+.txt-secondary{ color:#32db64}
+.txt-danger{ color:#f53d3d}
+
+.txt-light{ color:#f4f4f4}
+.txt-dark{ color:#222}
+.txt-yellow{ color:#FFCC29}
+.txt-yellow-light{color:#FFF212}
+.txt-blue{color:#008AC6 }
+.txt-blue-dark{ color:#006893}
+.txt-green{ color:#A8CF45}
+.txt-green-dark{ color:#00A859}
+.txt-red{color:#Ed3237}
+.txt-red-dark{color:#Ad3335}
+.txt-white{color:white !important;}
+.txt-black{color:black !important;}
+.txt-mint { color: #00b894; }
+.txt-electro { color: #0984e3; }
+.txt-exodus { color: #6c5ce7; }
+.txt-breeze { color: #b2bec3; }
+.txt-city { color: #dfe6e9; }
+.txt-shy { color: #a29bfe; }
+.txt-yarrow { color: #fdcb6e; }
+.txt-orangeville { color: #e17055; }
+.txt-chicong { color: #e55039; }
+.txt-pink { color: #fd79a8; }
+.txt-prunus { color: #e84393; }
+.txt-american { color: #636e72; }
+.txt-dracula { color: #2d3436; }
+
+
+/* text line heignt
+----------------------------------------*/
+.line-height-reset{line-height:normal !important; }
+.line-height-1{line-height:1 !important;}
+
+/* text alignemnt
+----------------------------------------*/
+.txt-right{text-align: right !important;}
+.txt-left{text-align: left !important;}
+.txt-center{text-align: center !important;}
+.txt-justify{text-align: justify !important;}
+
+/* Others
 ----------------------------------------*/
 .no-click{ pointer-events:none;}
 .no-click > *{ pointer-events:all;}
+.no-margin{margin:0;}
+.no-style-list{ list-style:none; }
+.block{display: block !important;}
+.ellipsis{overflow:hidden!important; text-overflow:ellipsis!important;}
 
-$width:  'width' !default;
-$height: 'heigth' !default;
-$margin: 'margin' !default;
-$padding:'padding' !default;
 
-@for $i from 6 through 42{
-  .#{$width}-#{$i}{
-    if($i > 18){
-    width: 0px + $i+2 !important;
-    }else{
-      width: 0px + $i !important;
-    }
+/* text font size
+----------------------------------------*/
+$fs: font-size !default;
+@for $i from 4 through 120{
+  .#{fs}-#{$i}{
+    #{$fs}: #{$i}px !important;
+  }
+}
+
+/* GAPS
+----------------------------------------*/
+$horizontal-gaps: 'hgap' !default;
+$vertical-gaps: 'vgap' !default;
+@for $i from 5 through 80{
+  .#{$horizontal-gaps}-#{$i}{
+    width: 0px + $i !important;
   }
 };
-
-@for $i from 5 through 42{
-  .#{$height}-#{$i}{
-    if($i > 18){
-      height: 0px + $i+2 !important;
-    }else{
-      height: 0px + $i !important;
-    }
+@for $i from 5 through 80{
+  .#{$vertical-gaps}-#{$i}{
+    height: 0px + $i !important;
   }
 };
